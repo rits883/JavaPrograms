@@ -23,7 +23,7 @@ public class StringSession1 {
 	 */
 	
 	public static void main(String[] args) {
-	  
+	  m11();
 	}
 	
 	/**
@@ -212,5 +212,24 @@ public class StringSession1 {
 		 
 	}
 
+	/***
+	 * Q.11 How to check is String in Palindrome
+	 * */
+	public static void m11() {
+		String input = "mom";
+		char [] inputArray = input.toCharArray();
+		StringBuffer reverse = new StringBuffer() ;
+		for(int i =inputArray.length-1;i>=0;i--) {
+			reverse.append(inputArray[i]);
+		}
+		
+		if(input.equals(reverse.toString())) {
+			System.out.println("Palindrome");
+		}
+		else {
+			System.out.println("Not Palindrome");
+		}
+		
+	}
 	
 }
