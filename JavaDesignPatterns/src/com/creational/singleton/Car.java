@@ -3,6 +3,8 @@
  */
 package com.creational.singleton;
 
+import java.io.Serializable;
+
 /**
  * @author REETESH KUMAR CHOUBEY
  *18-Dec-2018
@@ -17,7 +19,7 @@ package com.creational.singleton;
  * ****For multi threading environment  ***
  * public static synchronized Car getInstanceOf()
  * */
-public class Car {
+public class Car implements Serializable{
 
 	private static Car object;
 	private Car() {
