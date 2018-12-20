@@ -13,7 +13,7 @@ import javax.sound.midi.Soundbank;
  */
 public class CarsFactory {
 
-	public  Car getCar(String type) {
+	public  static Car getCar(String type) {
 		
 		try {
 		if(type.equalsIgnoreCase("HATCHPACK")) {

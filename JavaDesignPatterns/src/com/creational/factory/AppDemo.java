@@ -14,9 +14,7 @@ public class AppDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
-		CarsFactory cf = new CarsFactory();
-		SUV suv = (SUV) cf.getCar("SUV");
+		SUV suv = (SUV) CarsFactory.getCar("SUV");
 		suv.carSpecification();
 		
 
