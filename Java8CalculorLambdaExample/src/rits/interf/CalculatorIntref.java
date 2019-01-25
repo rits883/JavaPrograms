@@ -8,7 +8,7 @@ package rits.interf;
  * 25-Jan-2019
  * Java8CalculorLambdaExample
  * 
- * This class contains   abstract method  default and static method
+ * This class contains abstract method  default and static method
  */
 @FunctionalInterface
 public interface CalculatorIntref {
