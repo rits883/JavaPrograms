@@ -10,6 +10,7 @@ import rits.interf.CalculatorIntref;
  * 25-Jan-2019
  * Java8CalculorLambdaExample
  * 
+ * This example explains Java 8 Lambda function  changes
  */
 public class App  implements CalculatorIntref{
 
