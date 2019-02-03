@@ -3,6 +3,13 @@
  */
 package rits.app;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
 import rits.interf.CalculatorIntref;
 
 /**
@@ -51,10 +58,42 @@ public class App  implements  CalculatorIntref {
 		/** Constuctor **/
 		CalculatorIntref calculatorIntref3  = App::new;
 		calculatorIntref3.ploynomialFuntion(20, 30);
+		
+		/*** PreDefine Function interface ***/
 	
+		/*1. check even*/
+		Predicate<Integer> funcRange = app.checkRange();
+		System.out.println(funcRange.test(11)+" Number 11");
+		System.out.println(funcRange.test(8)+" Number 8");
+		
+		
+		/*Function Interface */
+		List<Integer> al  = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
+		Function<List<Integer>,List<Integer>> evenFucntion  = app.getEvenNumberFun();
+		System.out.println(evenFucntion.apply(al));
+		
 	}
 	
 	
+	/** Predicate Example **/
+	
+	public Predicate<Integer> checkRange (){
+		Predicate<Integer> rangeFun= number -> (number>=0 && number<=10) ;
+		return rangeFun;
+	}
+	/*** Function Interface **/
+	public Function<List<Integer>,List<Integer>> getEvenNumberFun(){
+		Function<List<Integer>,List<Integer>> evenFun =  list -> {
+			List<Integer> evenList = list.stream().filter(number -> number %2==0).collect(Collectors.toList());
+			return evenList;
+		};
+		return evenFun;
+	}
+	
+	/** Consumer **/
+	
+	
+	/**  Suppler **/
 	
 	
 	public void callDefaultMethods() {
