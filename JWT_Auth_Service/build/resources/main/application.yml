@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: JWT_Auth_Service
+  port: 8081
+  data:
+    mongodb:
+      database : "auth_db"
+      host: "localhost"
+      port: "27017"
+
+
+  security:
+    jwt_secret_key : "f429ec54f354b72bed77a5c0afedecb91f347f479a09f74f4107592764b56d1c"
+    jwt_expiration_time : "3600000"
+
+logging:
+  level:
+    org.springframework.web: DEBUG
